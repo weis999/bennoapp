@@ -24,9 +24,7 @@ jobs:
       run: |
         python3 -m venv env
         source env/bin/activate
-        pip3 install --user pipenv
-        source /home/runner/.local/bin
-        pipenv install flask-mongoengine Flask Flask-RESTful Flask-Bcrypt Flask-JWT-Extended
+        pip install flask-mongoengine Flask Flask-RESTful Flask-Bcrypt Flask-JWT-Extended
     - name: Zip the application files
       run: zip -r myapp.zip .
 
