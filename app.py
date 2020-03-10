@@ -16,11 +16,13 @@ from resources.routes import initialize_routes
  'DELETE' request. This is the url for POSTMAN: https://www.postman.com/downloads/
  @@ POSTMAN @@
 """
+
+app = Flask(__name__)
+
    @app.route('/')
 def hello_world():
   return 'Hey its Python Flask application!'
 
-app = Flask(__name__)
 app.config['SECRET_KEY'] = 'nultjm2hoe0bioq32xohyt06bdrlp7'
 #app.config.from_envvar('ENV_FILE_LOCATION')
 # In this app the following CRUDs are being used: 'CREATE', 'UPDATE', 'GET', 'DELETE'
