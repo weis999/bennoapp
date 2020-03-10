@@ -15,7 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-
     - name: Set up Python version
       uses: actions/setup-python@v1
       with:
@@ -25,7 +24,7 @@ jobs:
       run: |
         python3 -m venv env
         source env/bin/activate
-        pip3 install -r requirements.txt
+        pip install -r requirements.txt
     - name: Zip the application files
       run: zip -r myapp.zip .
 
@@ -35,4 +34,4 @@ jobs:
         app-name: 'bennoapp'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_e266045894d0434d814bb970e369c330 }}
-        package: './myapp.zip'
+        package: './myapp.zip' 
