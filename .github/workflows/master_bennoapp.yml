@@ -24,7 +24,7 @@ jobs:
       run: |
         python3 -m venv env
         source env/bin/activate
-        pip install flask-mongoengine Flask Flask-RESTful Flask-Bcrypt Flask-JWT-Extended
+        pip3 install -r requirements.txt
     - name: Zip the application files
       run: zip -r myapp.zip .
 
@@ -33,5 +33,5 @@ jobs:
       with:
         app-name: 'bennoapp'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_e8894a600e8347b2b874f854d74644da }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_e266045894d0434d814bb970e369c330 }}
         package: './myapp.zip'
