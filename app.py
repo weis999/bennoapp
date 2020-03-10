@@ -1,12 +1,3 @@
-"""
-   Module-Flask: For our web server.
-   * Function-request: ...
-   * Function-Response: To set the type of a response
-   Module-database.db: Self made module in ~/movie-bag/database/
-   * initialize_db: This function is to intialize the database
-   Module-database.models:  Self made module in ~/movie-bag/database/
-   * Function-Movie: This is a function to make a document into the database
-"""
 from flask import Flask
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
