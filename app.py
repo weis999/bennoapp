@@ -28,7 +28,8 @@ from resources.routes import initialize_routes
 
 
 app = Flask(__name__)
-app.config.from_envvar('ENV_FILE_LOCATION')
+app.config['SECRET_KEY'] = 'nultjm2hoe0bioq32xohyt06bdrlp7'
+#app.config.from_envvar('ENV_FILE_LOCATION')
 # In this app the following CRUDs are being used: 'CREATE', 'UPDATE', 'GET', 'DELETE'
 api = Api(app, errors=errors)
 bcrypt = Bcrypt(app)
