@@ -1,9 +1,4 @@
 from flask import Flask
-app = Flask(_name_)
-
-
-
-from flask import Flask
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
 from resources.errors import errors
