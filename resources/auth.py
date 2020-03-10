@@ -49,15 +49,3 @@ class PersonGet(Resource):
         query = Person.objects()
         results = Person.objects().to_json()
         return Response(results, mimetype="application/json", status=200)
-
-class PersonsGet(Resource):        
-    # Methode 'DELETE'
-    def delete(self, id):
-        try:
-            person = Person.objects()
-            person.delete()
-            return Response('Delete status: ', status=200)
-        except DoesNotExist:
-            raise UpdatingFieldError
-        except Exception:
-            raise InternalServerError
