@@ -1,4 +1,9 @@
 from flask import Flask
+app = Flask(_name_)
+
+
+
+from flask import Flask
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
 from resources.errors import errors
@@ -16,7 +21,9 @@ from resources.routes import initialize_routes
  'DELETE' request. This is the url for POSTMAN: https://www.postman.com/downloads/
  @@ POSTMAN @@
 """
-
+   @app.route('/')
+def hello_world():
+  return 'Hey its Python Flask application!'
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'nultjm2hoe0bioq32xohyt06bdrlp7'
@@ -44,6 +51,5 @@ initialize_db(app)
 initialize_routes(api)
 
 
-if __name__ == '__main__':
-    # With the app.run the flask server will be called into action
-    app.run(debug=True, ssl_context='adhoc', host='0.0.0.0')
+if _name_ == '_main_':
+    app.run(host='0.0.0.0')
