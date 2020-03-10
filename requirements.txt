@@ -3,4 +3,3 @@ flask-mongoengine
 flask-restful
 flask-bcrypt
 flask-jwt-extended
-flask-restful
