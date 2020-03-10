@@ -54,4 +54,4 @@ initialize_routes(api)
 
 if __name__ == '__main__':
     # With the app.run the flask server will be called into action
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', port='80', ssl=True)
